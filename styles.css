@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    min-height: 100vh;
+    cursor: none;
+}
+
+.cursor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #29044a;
+    transition: width 0.25s, height 0.25s;
+}
+
+.cursor.isDown {
+    width: 80px;
+    height: 80px;
+}
+
+.cursor span {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+}
+
+.cursor.isDown span {
+    top: 100px;
+    left: 100px;
+}
+
+canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    user-select: none;
+}
